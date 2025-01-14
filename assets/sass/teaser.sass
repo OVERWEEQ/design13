@@ -1,0 +1,542 @@
+.teaser
+  min-width: 300px
+  gap: 0 24px
+  margin-bottom: 8px
+  &__item
+    width: calc(33.3333% - (24px * 2/3)) 
+    @include media('md')
+      width: 100%
+      display: flex
+      margin-bottom: 1.5rem
+      margin-top: 1rem
+    @include media('sm')
+      display: block
+      margin-bottom: 0
+  &__header2
+    font-family: Work Sans
+    font-weight: 600
+    font-size: 14px
+    letter-spacing: 0.7px
+    margin: 16px 0 24px 0
+    @include media('lg')
+      margin: 16px auto 24px auto
+  &__header1
+    font-family: Rufina
+    font-size: 30px
+    font-weight: 700
+    letter-spacing: -0.1px
+    line-height: 40px
+    margin: 17px 0 25px -1px
+  &__figure
+    margin: 0
+    @include media('md')
+      width: 50%
+    @include media('sm')
+      width: 100%
+  &__content
+    font-family: 'Oswald', sans-serif
+    margin-bottom: 31px
+    @include media('md')
+      width: 50%
+    @include media('sm')
+      width: 100%
+      margin-bottom: 0
+      padding-bottom: 1rem
+  &__sub-title
+    font-family: Work Sans
+    font-weight: 600
+    font-size: 12px
+    padding-top: 13px
+    color: var(--fontHighlightColor)
+    letter-spacing: 0.6px
+    text-align: center
+  &__title
+    font-family: Rufina
+    font-size: 17px
+    font-weight: 700
+    letter-spacing: 0.5px
+    padding: 5px 0px 0 0px
+    line-height: 24px
+    color: black
+    text-align: center
+    @include media('sm')
+      font-size: calc(2vw + 11px)
+      line-height: calc(5vw + 10px)
+  &__tag
+    font-size: 12px !important
+    padding: 7px 0px 2px 15px !important
+    font-family: Work Sans
+    font-weight: 500
+    color: #505050
+    position: relative
+    left: -11px
+    top: -1px
+    width: fit-content
+    height: 17px
+    margin: 0 auto
+  &__description
+    height: 0
+    font-size: 12px !important
+    padding: 7px 0px 2px 15px !important
+    font-family: Work Sans
+    font-weight: 500
+    color: #505050
+    position: relative
+    left: -12px
+    top: -1px
+  &__anzeige
+    font-size: 10px
+    font-family: Work Sans
+    color: #8e8e8e
+    position: relative
+    top: -19px
+    text-align: end
+    height: 0
+    @include media('md')
+      text-align: start
+      top: -18px
+      position: relative
+      width: 0
+  &__img
+    transform: scale(1)
+    transition: transform 1.2s ease-in-out
+  &__item:hover
+    .teaser__title
+      color: var(--fontHighlightColor)
+      @include media('md')
+        color: var(--fontDarkColor)
+    .teaser__img
+      transform: scale3d(1.15,1.15,1)
+      @include media('md')
+        transform: scale3d(1,1,1)
+  &__item-add
+    min-width: 300px
+    width: calc(33.333% - 17px)
+    margin-left: auto
+    margin-right: auto
+    @include media('lg')
+      width: calc(33.3333% - (24px * 2/3)) 
+      min-width: 300px
+    @include media('md')
+      .teaser__figure, .teaser__content
+        width: 100%
+.teaser-one
+  margin: 22px 0 32px 0
+  @include media('md')
+    margin-top: 18px
+    margin-bottom: clamp(20px, 0px + 4.1667vw, 32px)
+  &__item
+    align-items: center
+    display: flex
+    @include media('md')
+      flex-direction: column 
+  &__figure
+    margin: 0
+    flex-shrink: 0
+    width: clamp(400px, -218.5108px + 80.4305vw, 811px)
+    @include media('md')
+      width: 100%
+  &__content
+    padding: 0 20px 0 clamp(17px, 9.4755px + 0.9785vw, 22px)
+    height: fit-content
+    @include media('md')
+      width: 100%
+      padding: 0
+  &__sub-title
+    font-family: Josefin Sans
+    font-size: clamp(16px, 9.9804px + 0.7828vw, 20px)
+    font-weight: 500
+    line-height: 25px
+    text-align: left
+    color: var(--fontHighlightColor)
+    @include media('md')
+      margin-top: clamp(4px, -7.6667px + 2.4306vw, 11px)
+      font-size: clamp(14px, 10.6667px + 0.6944vw, 16px)
+  &__title
+    font-family: Josefin Sans
+    font-size: clamp(25px, 14.4658px + 1.3699vw, 32px)
+    font-weight: 700
+    line-height: clamp(28px, 9.9413px + 2.3483vw, 40px)
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: clamp(1px, -21.5734px + 2.9354vw, 16px)
+    transition: color .33s ease-in-out
+    @include media('md')
+      font-size: clamp(20px, 11.6667px + 1.7361vw, 25px)
+      line-height: clamp(25px, 20px + 1.0417vw, 28px)
+  &__desc
+    font-family: Josefin Sans
+    font-size: 20px
+    font-weight: 700
+    line-height: 30px
+    text-align: left
+    color: #444444
+    margin-top: 14px
+    @include mediaMax(1023)
+      display: none
+  &__anzeige
+    font-size: 10px
+    font-family: Work Sans
+    color: #8e8e8e
+    position: relative
+    top: -5px
+    @include media('md')
+      top: -18px
+      position: relative
+      width: 0
+  &__img
+    transform: scale(1)
+    transition: transform .33s ease-in-out
+  &__item:hover
+    .teaser-one__title
+      color: var(--fontHighlightColor)
+      @include media('md')
+        color: var(--fontDarkColor)
+    .teaser-one__img
+      transform: scale(1.05)
+      @include media('md')
+        transform: scale(1)
+.teaser-one-small
+  margin: 22px 0 32px 0
+  @media (min-width: 1280px)
+    .teaser-one__figure
+      width: 49%
+  
+  .teaser-one__content
+    padding: 0 3svw 0 25px
+  .teaser-one__sub-title
+    margin-top: -3px
+  .teaser-one__title
+    margin-top: 9px
+  .teaser-one__desc
+    font-weight: 500
+    margin-top: 7px
+    line-height: 26px
+.teaser-row
+  &__item
+    display: flex
+    margin-bottom: 25px
+    @include media('ms')
+      flex-direction: column
+  &__figure
+    width: 289px
+    margin: 0
+    flex-shrink: 0
+    @include media('ms')
+      width: 100%
+  &__content
+    padding-left: 24px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @include media('ms')
+      width: 100%
+      padding-left: 0
+      margin-top: 25px
+  &__sub-title
+    font-family: Josefin Sans
+    font-size: 16px
+    font-weight: 500
+    line-height: 20px
+    text-align: left
+    color: var(--fontHighlightColor)
+    margin-top: -2px
+  &__title
+    font-family: Josefin Sans
+    font-size: 20px
+    font-weight: 600
+    line-height: 25px
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: 5px
+  &__desc
+    font-family: Josefin Sans
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: 7px
+  &__img
+    transform: scale(1)
+    transition: transform .33s ease-in-out
+  &__item:hover
+    .teaser-row__title
+      color: var(--fontHighlightColor)
+      @include media('md')
+        color: var(--fontDarkColor)
+    .teaser-row__img
+      transform: scale(1.05)
+      @include media('md')
+        transform: scale(1)
+
+.teaser-four
+  margin-top: 37px
+  @include media('md')
+    flex-direction: column
+    margin-top: 21px
+  &__container
+    display: flex
+    gap: 25px
+    @include media('md')
+      flex-wrap: wrap
+      gap: 15px
+  &__item
+    width: calc(25% - 18px)
+    @include media('md')
+      width: 100%
+      display: flex
+  &__figure
+    margin: 0
+    @include media('md')
+      width: clamp(100px, 33.3333px + 34.7222vw, 300px)
+      flex-shrink: 0
+  &__content
+    @include media('md')
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-left: clamp(8px, -8.6667px + 3.4722vw, 18px)
+  &__sub-title
+    font-family: Josefin Sans
+    font-size: 14px
+    font-weight: 500
+    line-height: 17px
+    text-align: left
+    color: var(--fontHighlightColor)
+    margin-top: 12px
+    @include line-clamp(1, true)
+    @include media('md')
+      margin-top: 0
+      font-size: clamp(14px, 9px + 1.0417vw, 17px)
+  &__title
+    font-family: Josefin Sans
+    font-size: clamp(17px, 12.4853px + 0.5871vw, 20px)
+    font-weight: 600
+    line-height: clamp(20px, 12.4755px + 0.9785vw, 25px)
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: 4px
+    transition: color .33s ease-in-out
+    @include line-clamp(3, true)
+    @include media('md')
+      font-size: clamp(18px, 11.3333px + 1.3889vw, 22px)
+      line-height: clamp(20px, 15px + 1.0417vw, 23px)
+  &__img
+    transform: scale(1)
+    transition: transform .33s ease-in-out
+  &__item:hover
+    .teaser-four__title
+      color: var(--fontHighlightColor)
+      @include media('md')
+        color: var(--fontDarkColor)
+    .teaser-four__img
+      transform: scale(1.05)
+      @include media('md')
+        transform: scale(1)
+.teaser-two
+  display: flex
+  gap: clamp(16px, 2.456px + 1.7613vw, 25px)
+  margin-top: clamp(23px, 28.0098px + -0.3914vw, 25px)
+  @include media('md')
+    flex-direction: column
+  &__item
+    width: unset
+    height: fit-content
+    @include media('md')
+      width: 100%
+      display: flex
+  &__figure
+    margin: 0
+    @include media('md')
+      width: clamp(100px, 33.3333px + 34.7222vw, 300px)
+      flex-shrink: 0
+  &__content
+    margin-bottom: clamp(20px, 12.4755px + 0.9785vw, 25px)
+    @include media('md')
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-left: clamp(8px, -8.6667px + 3.4722vw, 18px)
+  &__sub-title
+    font-family: Josefin Sans
+    font-size: clamp(16px, 9.9804px + 0.7828vw, 20px)
+    font-weight: 500
+    line-height: 25px
+    text-align: left
+    color: var(--fontHighlightColor)
+    margin-top: clamp(8px, -10.0587px + 2.3483vw, 20px)
+    @include media('md')
+      margin-top: 0
+      font-size: clamp(14px, 9px + 1.0417vw, 17px)
+  &__title
+    font-family: Josefin Sans
+    font-size: clamp(26px, 16.9706px + 1.1742vw, 32px)
+    line-height: clamp(28px, 9.9413px + 2.3483vw, 40px)
+    font-weight: 600
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: clamp(0px, -6.0196px + 0.7828vw, 4px)
+    transition: color .33s ease-in-out
+    @include line-clamp(3, true)
+    @include media('md')
+      font-size: clamp(18px, 11.3333px + 1.3889vw, 22px)
+      line-height: clamp(20px, 15px + 1.0417vw, 23px)
+  &__img
+    transform: scale(1)
+    transition: transform .33s ease-in-out
+  &__item:hover
+    .teaser-two__title
+      color: var(--fontHighlightColor)
+      @include media('md')
+        color: var(--fontDarkColor)
+    .teaser-two__img
+      transform: scale(1.05)
+      @include media('md')
+        transform: scale(1)
+.teaser-group
+  background: #FEE1ED
+  position: relative
+  margin-top: clamp(44px, 51.5147px + -0.5871vw, 47px)
+  left: -25px
+  width: calc(100% + 50px)
+  padding: clamp(21px, 33.5245px + -0.9785vw, 26px) 24px clamp(21px, 10.4658px + 1.3699vw, 28px) 24px
+  @include media('md')
+    margin-top: clamp(11px, -0.6667px + 2.4306vw, 18px)
+    padding: 16px 24px
+    left: -23px
+    width: calc(100% + 39px)
+  .teaser-three__sub-title
+    color: var(--fontDarkColor)
+  .teaser-three__title
+    color: var(--fontDarkColor) !important
+    
+.teaser-three
+  margin-top: 92px
+  @include media('lg')
+    margin-top: 1rem
+  &__header
+    font-family: Josefin Sans
+    font-size: 32px
+    font-weight: 700
+    line-height: 40px
+    text-align: left
+    color: var(--fontDarkColor)
+    margin: 4px 0 22px 0
+    @include media('reg')
+      padding-left: 1rem
+      padding-right: 1rem
+  &__container
+    display: flex
+    gap: clamp(16px, 2.456px + 1.7613vw, 25px)
+    @include media('md')
+      flex-direction: column
+  &__item
+    width: 35%
+    @include media('md')
+      width: 100%
+      display: flex
+  &__figure
+    margin: 0
+    @include media('md')
+      width: clamp(100px, 33.3333px + 34.7222vw, 300px)
+      flex-shrink: 0
+  &__content
+    @include media('md')
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin-left: clamp(8px, -8.6667px + 3.4722vw, 18px)
+  &__sub-title
+    font-family: Josefin Sans
+    font-size: 16px
+    font-weight: 600
+    line-height: 20px
+    text-align: left
+    color: var(--fontHighlightColor)  
+    margin: clamp(9px, -13.5734px + 2.9354vw, 24px) 0 0 0px
+    @include media('md')
+      margin-top: 0
+      font-size: clamp(15px, 11.6667px + 0.6944vw, 17px)
+  &__title
+    font-family: Josefin Sans
+    font-size: clamp(20px, 13.9804px + 0.7828vw, 24px)
+    font-weight: 600
+    line-height: clamp(23px, 12.4658px + 1.3699vw, 30px)
+    text-align: left
+    color: var(--fontDarkColor)
+    margin: clamp(3px, -3.0196px + 0.7828vw, 7px) 0 0 0px
+    transition: color .33s ease-in-out
+    @include line-clamp(3, true)
+    @include media('md')
+      font-size: clamp(18px, 11.3333px + 1.3889vw, 22px)
+      line-height: clamp(20px, 15px + 1.0417vw, 23px)
+  &__img
+    transform: scale(1)
+    transition: transform .33s ease-in-out
+  &__item:hover
+    .teaser-three__title
+      color: var(--fontHighlightColor)
+      @include media('md')
+        color: var(--fontDarkColor)
+    .teaser-three__img
+      transform: scale(1.05)
+      @include media('md')
+        transform: scale(1)
+.teaser-swapper
+  margin: 31px 0 39px 0px
+  display: flex
+  &__container
+    display: flex
+    gap: 9px
+    width: 100%
+    overflow-x: auto
+    overflow-y: hidden
+    scroll-behavior: smooth
+    scroll-snap-type: x mandatory
+    scrollbar-width: none
+    flex-shrink: 0
+    &::-webkit-scrollbar
+      display: none
+  &__figure
+    width: 141px
+    aspect-ratio: 4.21/2
+    margin: 0
+  &__content
+    width: 100%
+    height: 100%
+    left: 0
+    bottom: 0
+    position: sticky
+    background: #1919194D
+  &__title
+    font-family: Josefin Sans
+    font-size: 14px
+    font-weight: 700
+    line-height: 17px
+    text-align: center
+    color: white
+    padding-top: 43px
+  &__btn
+    fill: #fff
+    left: 25%
+    top: 10%
+    width: 0
+    height: 67px
+    svg
+      width: 34px
+      height: 67px
+      fill: #fff
+      z-index: 1
+      position: relative
+  &__btn-right
+    position: relative
+    left: -34px
+  &__img
+    transform: scale(1)
+    transition: transform .33s ease-in-out
+  &__item:hover
+    .teaser-swapper__img
+      transform: scale(1.05)
+      @include media('md')
+        transform: scale(1)

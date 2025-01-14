@@ -1,0 +1,29 @@
+.header
+  height: 160px
+  @include media('md')
+    height: clamp(83px, 51.3333px + 6.5972vw, 102px)
+  &__logo
+    &__name
+      font-family: Josefin Sans
+      font-size: 48px
+      font-weight: 600
+      line-height: 48px
+      text-align: center
+      color: #FF5C9C
+      padding-top: 49px
+      margin: 0 0 0 -2px
+      @include media('md')
+        font-size: clamp(28px, 8px + 4.1667vw, 40px)
+        line-height: 1
+        padding-top: clamp(19px, 7.3333px + 2.4306vw, 26px)
+    &__slogan
+      font-family: Mynerve
+      font-size: 28px
+      font-weight: 400
+      line-height: 36.68px
+      text-align: center
+      color: #656565
+      margin: 2px 0 0 clamp(0px, -388.2622px + 50.4892vw, 258px)
+      @include media('md')
+        font-size: clamp(22px, 18.6667px + 0.6944vw, 24px)
+        line-height: 20px

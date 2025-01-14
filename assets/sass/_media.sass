@@ -1,0 +1,20 @@
+$sizes: ("xs": 450px, "md":768px, "md+":769px, "lg":1280px)
+  
+@mixin media($media)
+  @each $size, $resolution in $sizes
+    @if $media == $size
+      @media (max-width: $resolution)
+        @content
+  
+  
+// Универсальный media по max-width
+@mixin mediaMax($size)
+  @media (max-width: $size + px)
+    @content
+  
+@mixin line_clamp($number: 2, $apply_overflow: true)
+  -webkit-line-clamp: $number
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  @if $apply_overflow
+    overflow: hidden

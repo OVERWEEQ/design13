@@ -1,0 +1,254 @@
+@import 'media'
+@import 'vendors/_font-face'
+@import 'variables'
+@import 'fonts/mynerve'
+@import 'fonts/josefinsans'
+
+@import 'header'
+@import 'nav'
+  
+@import 'breadcrumbs'
+@import 'teaser'
+@import 'add'
+@import 'multi_section'
+
+@import 'tags'
+@import 'header-devided'
+
+@import 'categories'
+
+.--d-flex
+  display: flex
+.--d-block
+  display: block
+.--align-items-center
+  align-items: center
+.--align-items-end
+  align-items: end
+.--text-align-center
+  text-align: center
+.--border-bottom
+  border-bottom: solid 7px var(--accentColor)
+.--justify-content-space-between
+  justify-content: space-between
+.--justify-content-space-around
+  justify-content: space-around
+.--justify-content-space-evenly
+  justify-content: space-evenly
+.--justify-content-center
+  justify-content: center
+.--justify-content-end
+  justify-content: end
+.--flex-direction-column
+  flex-direction: column
+.--fw-wrap
+  flex-wrap: wrap
+.--fw-nowrap
+  flex-wrap: nowrap
+.--text-align-start
+  text-align: start
+.--border-bottom
+  border-bottom: 1px solid #D9D9D9
+
+h3
+  font-family: Josefin Sans
+  font-size: 20px
+  font-weight: 500
+  line-height: 25px
+  text-align: left
+  color: var(--fontDarkColor)
+h2
+  font-family: Josefin Sans
+  font-size: 36px
+  font-weight: 700
+  line-height: 45px
+  text-align: left
+  color: var(--fontDarkColor)
+  margin: 6px 0 5px 0
+  width: 75%
+  @include media('md')
+    width: 100%
+    font-size: calc(2.2vw + 17px)
+    line-height: calc(2.2vw + 28px)
+.intro
+  font-family: Josefin Sans
+  font-size: 20px
+  font-weight: 700
+  line-height: 30px
+  text-align: left
+  width: 74%
+  color: #444
+  @include media('reg')
+    width: 100%
+
+
+.main-structure
+  font-size: 16px
+  background-color: var(--bgColor)
+  a
+    text-decoration: none
+  li
+    list-style: none
+  #wrapper_content
+    max-width: 1280px
+    margin: auto
+    background-color: var(--bgColor)
+    main
+      padding: 0 25px
+      padding-bottom: 1rem !important
+      overflow: hidden
+      @include media('md')
+        padding: 0 clamp(10px, 0px + 2.0833vw, 16px)
+      figure
+        overflow: hidden
+      
+#category
+  main
+    .row:nth-child(1)
+      margin: 28px 0 26px 0
+      p
+        font-size: 12px
+        font-family: Work Sans
+        color: #8e8e8e
+      a:hover p
+        color: var(--fontHighlightColor) !important
+    .row:nth-child(3)
+      margin: 2rem 0 0.5rem 0
+    .add-600-300
+      margin-top: 0
+    .multi_section:nth-child(8)
+      margin-top: 130px
+    @media (min-width: 1280px)
+      .teaser-two
+        margin-top: 0
+        &__sub-title
+          font-size: 20px
+          margin-top: 13px
+        &__title
+          font-size: 24px
+          line-height: 30px
+
+#home
+  main
+    .teaser-group
+      background: #C1EBFF
+    .teaser-one:nth-child(6)
+      .teaser-one__item
+        background: #DAEDB4
+#article
+  main
+    .tags
+      margin-bottom: 12px
+    .breadcrumbs
+      padding: 0
+      a
+        text-decoration-line: none !important
+    h2
+      margin-top: 4px
+    .article
+      margin: 17px 0 0 0
+      &__metric
+        display: flex
+        align-items: center
+        padding-bottom: 23px
+        margin-bottom: 21px
+      &__avatar
+        height: 32px
+        width: 32px
+        border-radius: 50%
+        background: var(--bgAccentColor)
+        margin: 0
+        &__letter
+          font-family: Josefin Sans
+          font-size: 20px
+          font-weight: 700
+          line-height: 37px
+          text-align: center
+          color: white
+      &__name
+        font-family: Josefin Sans
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: left
+        color: #505050
+        margin: 6px 0 0 12px
+      &__date
+        font-family: Josefin Sans
+        font-size: 16px
+        font-weight: 400
+        line-height: 20px
+        text-align: left
+        color: #B1B1B1
+        margin: 6px 0 0 29px
+      &__intro
+        font-family: Josefin Sans
+        font-size: 20px
+        font-weight: 700
+        line-height: 30px
+        text-align: left
+        color: #444444
+        width: 75%
+        @include media('lg')
+          width: 100%
+      &__figure-one
+        margin: 0 0 39px 0
+      &__text
+        font-family: Josefin Sans
+        font-size: 20px
+        font-weight: 500
+        line-height: 30px
+        text-align: left
+        color: #505050
+        margin-top: 25px
+      &__row
+        display: flex
+        @include media('md')
+          flex-direction: column
+        &__figure
+          margin: 0
+          flex-shrink: 0
+        &__content
+          margin-left: 26px
+          display: flex
+          flex-direction: column
+          justify-content: center
+          @include media('md')
+            margin-left: 0
+        &__title
+          font-family: Josefin Sans
+          font-size: 20px
+          font-weight: 700
+          line-height: 25px
+          text-align: left
+          color: var(--fontDarkColor)
+          margin-top: -12px
+          @include media('md')
+            margin-top: 25px
+        &__desc
+          font-family: Josefin Sans
+          font-size: 16px
+          font-weight: 500
+          line-height: 24px
+          text-align: left
+          color: var(--fontDarkColor)
+          margin: 6px 17px 0 0
+      &__header
+        font-family: Josefin Sans
+        font-size: 32px
+        font-weight: 700
+        line-height: 40px
+        text-align: left
+        color: var(--fontDarkColor)
+        margin: 14px 0 -14px 0
+      .multi_section
+        margin: 24px 0 0 0
+        padding-bottom: 32px
+      .multi_section:nth-child(4)
+        margin-top: 25px
+        padding-bottom: 24px
+  .teaser-three
+    margin-top: 25px 
+    &__sub-title
+      color: var(--fontDarkColor)
+      

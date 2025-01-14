@@ -1,0 +1,20 @@
+.tags
+  margin-top: clamp(23px, -16.1272px + 5.0881vw, 49px)
+  margin-bottom: clamp(22px, 11.4658px + 1.3699vw, 29px)
+  @include media('md')
+    margin-top: 18px
+    margin-bottom: 18px
+  &__container
+    display: flex
+    gap: 10px
+    overflow-x: scroll
+    scrollbar-width: none
+  &__item
+    font-family: Josefin Sans
+    font-size: 16px
+    font-weight: 500
+    line-height: 16px
+    text-align: center
+    color: var(--fontDarkColor)
+    padding: 11px 14px 7px 14px
+    border: 3px solid var(--bgAccentColor)

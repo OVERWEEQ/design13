@@ -1,0 +1,57 @@
+@import 'variables'
+
+.nav
+    background: var(--bgAccentColor)
+    display: flex
+    height: 60px
+    @include media('md')
+        justify-content: end
+        align-items: center
+        height: clamp(38px, 1.3333px + 7.6389vw, 60px)
+    &__links-container
+        margin: 0 auto
+        display: flex
+        align-items: center  
+        padding-right: 2px
+        overflow-x: scroll
+        scrollbar-width: none
+        padding-left: 3px
+        @include media('md')
+            display: none
+        li
+            display: flex
+            height: 100%
+            align-items: center
+            padding: 3px clamp(7px, -0.5245px + 0.9785vw, 12px) 0
+    &__link
+        font-family: Josefin Sans
+        font-size: clamp(15px, 13.4951px + 0.1957vw, 16px)
+        font-weight: 500
+        line-height: clamp(15px, 13.4951px + 0.1957vw, 16px)
+        text-align: center
+        color: white
+        height: inherit
+        display: flex
+        justify-content: center
+        align-content: center
+        text-wrap: nowrap
+        flex-wrap: wrap
+    &__search
+        display: none
+        padding: 8px
+        @include media('md')
+            display: unset
+
+    &__fa-menu
+        padding: 8px
+        display: none
+        margin-right: 11px
+        align-items: center
+        @include media('md')
+            display: flex
+        &::before
+            content: " "
+            width: 1px
+            height: 28px
+            background-color: white
+            margin: 0 18px 0 3px
